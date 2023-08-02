@@ -45,5 +45,17 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+      function ({ addComponents, matchUtilities, theme }) {
+      addComponents({
+        '.body': {
+          fontFamily: "var(--font-inter) !important",
+          color: '#77797E',
+          fontSize: '1rem',
+          fontWeight: '400',
+          lineHeight: '1.5rem',
+        },
+      });
+    }
+  ],
 }
