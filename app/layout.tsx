@@ -3,8 +3,8 @@ import type {Metadata} from 'next'
 import {Inter, Mulish} from 'next/font/google'
 import React from "react";
 //components
-import Header from './../components/Header'
-import Footer from './../components/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 
 const inter = Inter({subsets: ['latin'], variable: '--font-inter', weight: ['400', '600']})
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-    <body className='.body'>
-    <Header/>
-    {children}
-    <Footer/>
-    </body>
+    <html lang="en" className={`${inter.variable} ${mulish.variable}`}>
+      <body>
+        <Header/>
+          {children}
+        <Footer/>
+      </body>
     </html>
-  )
+  ) 
 }
