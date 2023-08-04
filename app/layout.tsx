@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '@/styles/globals.css'
 import type {Metadata} from 'next'
 import {Inter, Mulish} from 'next/font/google'
 import React from "react";
